@@ -57,7 +57,6 @@ type: cv
   <div class="cv-header-info">
     <h1>Carl Andersson</h1>
     <p>
-      <a href="tel:+46736330876">+46736330876</a><br>
       <a href="mailto:carl@postspace.net">carl@postspace.net</a><br>
       <a href="https://github.com/lillecarl">github.com/lillecarl</a>
     </p>
