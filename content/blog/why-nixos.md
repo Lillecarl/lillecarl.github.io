@@ -3,6 +3,8 @@ title: "Why I Use NixOS"
 date: 2024-01-15
 description: "Declarative system configuration, reproducible builds, and why the learning curve is worth it."
 ---
+# AI slop warning
+This is AI slop, don't read it
 
 I've been using NixOS as my daily driver for a while now, and people often ask why I bother with something so different from traditional Linux distributions.
 

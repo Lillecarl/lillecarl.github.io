@@ -3,6 +3,8 @@ title: "Hello World"
 date: 2024-03-01
 description: "First post. Why I made this site and what to expect."
 ---
+# Placeholder AI slop
+Don't read this
 
 Finally got around to setting up a proper website. Built with Hugo, deployed via GitHub Actions, styled to be as minimal as possible.
 
