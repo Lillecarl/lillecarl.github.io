@@ -36,121 +36,120 @@ type: cv
     <p>
       <a href="tel:+46736330876">+46736330876</a><br>
       <a href="mailto:carl@postspace.net">carl@postspace.net</a><br>
-      <a href="https://github.com/lillecarl">https://github.com/lillecarl</a>
+      <a href="https://github.com/lillecarl">github.com/lillecarl</a>
     </p>
   </div>
   <img src="/cv-photo.png" alt="Carl Andersson" class="cv-photo">
 </div>
 
-<h2>WHO</h2>
-<p>Pragmatic infrastructure operator with a preference for battle-tested software and declarative configuration. TGIF Sailor, slope-skier, gamer and nerd</p>
+<h2>SUMMARY</h2>
+<p>DevOps/SRE engineer with 10+ years of experience across infrastructure, networking, and platform engineering. I prefer declarative configuration, battle-tested software, and solving problems properly rather than quickly. Strong background in network architecture, Kubernetes, and Nix-based infrastructure. I've worked across the stack from physical datacenters to cloud platforms, and I build tools when existing ones don't fit.</p>
 
 <h2>COMPETENCIES</h2>
 <p>
   <strong>Kubernetes</strong> •
-  <strong>Nix</strong> •
+  <strong>Nix/NixOS</strong> •
+  <strong>Terraform</strong> •
+  <strong>Linux</strong> •
   Cilium •
   Python •
-  <strong>Terraform</strong> •
   BGP •
   Prometheus •
-  <strong>NixOS</strong> •
   GitHub Actions •
-  VXLAN •
+  VXLAN/EVPN •
   Docker •
-  EVPN •
-  <s>Helm</s> •
-  <strong>Linux</strong> •
   PostgreSQL •
   FRR •
   AWS •
-  SOPS •
-  <s>Terragrunt</s> •
   Vault •
   GitLab •
   Cumulus Linux •
+  MikroTik •
+  Grafana •
+  ClusterAPI •
+  PowerShell •
   C# •
   IPv6 •
-  K3s •
-  <s>Ansible</s> •
-  PowerShell •
-  Grafana •
-  Kubeadm •
-  MikroTik •
-  GitLab Runners •
-  bash •
-  QEMU •
-  fish •
-  libvirt •
-  <s>SaltStack</s> •
   VMware •
-  <s>Azure</s>
+  QEMU/libvirt
 </p>
-
-<h2>CERTIFICATIONS</h2>
-<p><s>AWS SAA</s> • <s>MikroTik CNA</s></p>
 
 <h2>EXPERIENCE</h2>
 
-<h3>Evolvit <em>- DevOps</em></h3>
-<p><small>Aug 2025 - now()</small></p>
+<h3>Evolvit <em>- Infrastructure Consultant</em></h3>
+<p><small>Aug 2025 - Present (on hold)</small></p>
 <ul>
-  <li>Kubernetes, Kubeadm, ClusterAPI, Nix, Keycloak, VMware</li>
+  <li>ClusterAPI, Kubernetes, NixOS, Keycloak, VMware</li>
 </ul>
-<p>Consulting for Evolvit building an on-premise Kubernetes cluster with many bells and whistles, training Evolvit staff in Kubernetes, Nix and Linux</p>
+<p>Building a production Kubernetes environment on VMware for Evolvit (formerly Dialect). Full platform including ClusterAPI-managed control plane, Cilium networking, and OIDC authentication. Training staff on Kubernetes, Nix, and Linux administration. Project on hold due to client capacity constraints.</p>
 
-<h3>Helicon <em>- DevOps</em></h3>
+<h3>Helicon <em>- Infrastructure Consultant</em></h3>
 <p><small>Sep 2023 - Feb 2025</small></p>
+
+<p><strong>Stockholm Exergi (Energy sector)</strong></p>
 <ul>
-  <li>AWS, AWS IoT, Terraform, Ansible, Nomad, Consul, Vault, Python, Nix, Yocto</li>
-  <li>Kubernetes, CloudNative-PG, Nix, Grafana, KeyCloak, GitLab, BankID</li>
+  <li>AWS, Terraform, Nomad, Consul, Vault, Python, Nix</li>
 </ul>
-<p>Consulting for a large energy company managing a HashiCorp stack in AWS. Consulting at a smaller energy company managing AKS clusters + friends</p>
+<p>Inherited a problematic HashiCorp-based infrastructure (~$30k/month AWS, ~100 VMs) with significant architectural issues: Consul running on ephemeral EC2 nodes causing cluster-wide restart requirements, and Terraform states fragmented per-resource rather than per-component. Led major refactoring effort to consolidate Terraform states and make persistent infrastructure actually persistent. Recommended Kubernetes migration path which client later adopted.</p>
+
+<p><strong>Smaller energy company (Azure)</strong></p>
+<ul>
+  <li>Kubernetes, AKS, CloudNative-PG, Grafana, Prometheus, Keycloak, GitLab</li>
+</ul>
+<p>Maintained production AKS cluster with full observability stack. Built extensive CNPG monitoring for TimescaleDB workloads in Grafana. Managed Kustomize-based deployments and version upgrades.</p>
 
 <h3>Viaplay <em>- SRE</em></h3>
 <p><small>Sep 2022 - Aug 2023</small></p>
 <ul>
-  <li>AWS, OpenStack, Terraform, Saltstack, Ansible, Splunk, Python, GitLab, MAAS</li>
+  <li>OpenStack, Terraform, SaltStack, Ansible, Splunk, Python, MAAS</li>
   <li>AS202093, MikroTik, Cumulus Linux, Palo Alto</li>
 </ul>
-<p>Manage hybrid cloud environments (with focus on on-premise), 20-30 racks under team management. (Underlying infrastructure for K8s clusters at previous assignment)</p>
+<p>SRE in the Media Asset Management division managing hybrid cloud infrastructure. Responsible for 13PB IBM storage cluster, ~20 compute nodes (10 dedicated 24/7 transcoding, 10 project workloads), and 20-30 racks of on-premise infrastructure. Architected AWS-to-on-premise networking for MAM workload distribution. Part of team managing the physical infrastructure layer underlying Kubernetes clusters.</p>
 
-<h3>SDNit <em>- DevOps</em></h3>
+<h3>SDNit <em>- DevOps Consultant</em></h3>
 <p><small>Nov 2021 - Sep 2022</small></p>
 <ul>
-  <li>AWS, Terraform, Kubernetes, EKS, RKE2, Splunk, Gitlab, Python</li>
+  <li>AWS, Terraform, Kubernetes, EKS, RKE2, Splunk, GitLab, Python</li>
   <li>Keycloak, RDS, MongoDB Atlas</li>
 </ul>
-<p>Consulting for Viaplay, deployed and managed on-prem (RKE2) + EKS K8s clusters and friends</p>
+<p>Consulting for Viaplay. Initiated and deployed Kubernetes for Media Asset Management, modernizing infrastructure away from unreliable OpenStack provisioning. Managed both on-premise RKE2 and EKS clusters with supporting services.</p>
 
-<h3>Dialect <em>- SRE</em></h3>
+<h3>Dialect <em>- Infrastructure Engineer / SRE</em></h3>
 <p><small>Mar 2019 - Nov 2021</small></p>
 <ul>
   <li>AS205834, Cumulus Linux, MikroTik, Cisco, FortiNet</li>
   <li>VMware, Hyper-V, Veeam, Cohesity, PowerShell, Zabbix, PagerDuty</li>
-  <li>MikroTik & Networking teacher for all Dialect branch offices</li>
 </ul>
-<p>Technical responsibility for a small-ish datacenter (6 racks) working just below the CTO in decision making, planning purchases, implementing virtual machine workloads</p>
-
-<h3>Previous Experiences</h3>
-<p><small>2014 - 2019</small></p>
+<p>Technical responsibility for a 6-rack datacenter, reporting directly to CTO on infrastructure decisions and purchases. Managed 300-400 VMs including MikroTik Cloud Hosted Router instances for customer network isolation.</p>
+<p><strong>Key achievements:</strong></p>
 <ul>
-  <li>IT support</li>
-  <li>Sysadmin</li>
+  <li><strong>Network architecture redesign:</strong> Eliminated chronic STP looping issues by migrating customer connectivity from L2 tunneling to L3 routing, requiring subnet migrations across the customer base</li>
+  <li><strong>O365 crisis response:</strong> When parent company went bankrupt, wrote PowerShell + Puppeteer automation to create admin users and accept new CSP partnerships across 1000+ Microsoft 365 tenants</li>
+  <li><strong>Internal tooling:</strong> Built PBX queue monitoring with notifications, custom TeamViewer auto-registration installer (before native support existed), HTTP API for physical phone PBX group login/logout</li>
+  <li>MikroTik and networking instructor for all Dialect branch offices</li>
 </ul>
 
-<h2>NIX PROJECTS</h2>
-<p><a href="https://github.com/Lillecarl/nix-csi"><strong>nix-csi</strong></a> Delivers /nix through Kubernetes using the CSI protocol</p>
-<p><a href="https://github.com/Lillecarl/easykubenix"><strong>easykubenix</strong></a> Render Kubernetes manifests using Nix</p>
-<p><a href="https://github.com/Lillecarl/dinix"><strong>dinix</strong></a> Render dinit configurations using Nix</p>
-<p><a href="https://github.com/Lillecarl/registry/commit/96e3e3120f200dbf0c83cad2e2a3448f1acd0d8e"><strong>registry</strong></a> Create Nix derivations for all providers in the OpenTofu registry</p>
-<p><a href="https://github.com/Lillecarl/flake-compatish"><strong>flake-compatish</strong></a> Minimal flake compatibility layer, avoids eval from store</p>
-<p><a href="https://github.com/Lillecarl/hetzkube"><strong>hetzkube</strong></a> Cheap Kubernetes on Hetzner using easykubenix, nix-csi, dinix</p>
+<h3>IT Support & Sysadmin</h3>
+<p><small>2014 - 2019</small></p>
+<p>IT support and Windows Server administration serving 50+ SME customers (5-50 users each). Built high-quality support function from scratch together with one colleague. Specialized in MikroTik networking including site-to-datacenter tunnel infrastructure. PowerShell automation for cross-customer environment provisioning. This role established the networking foundation that led to my later datacenter and infrastructure work.</p>
 
-<h2>OTHER PROJECTS</h2>
+<h2>PROJECTS</h2>
 
-<h3>RC-Butiken</h3>
-<p>Build a C# daemon that syncs 20000+ SKU's from Minicars(Askås) to Shopify</p>
+<h3><a href="https://github.com/Lillecarl/hetzkube">hetzkube</a></h3>
+<p>Production-grade Kubernetes on Hetzner with a strict &lt;30 EUR/month budget. Full platform: ClusterAPI control plane, NixOS nodes, Cilium with Gateway API, custom IPAM for IPv4/IPv6 LoadBalancer address reuse, enforced dual-stack via Kyverno, kube-prometheus-stack, and OIDC authentication via Keycloak across all services. <a href="/blog/hetzkube/">[Details]</a></p>
 
-<h3>Dialect O365</h3>
-<p>Use browser automation to transfer 1000+ O365 tenants between CSP partners</p>
+<h3><a href="https://github.com/Lillecarl/nix-csi">nix-csi</a></h3>
+<p>Kubernetes CSI driver that mounts the Nix store into pods, enabling container image replacement with Nix packages. Uses hardlink views with shared inodes for memory-efficient page cache sharing across pods. Works on managed Kubernetes without node modifications. <a href="/blog/nix-csi/">[Details]</a></p>
+
+<h3><a href="https://github.com/Lillecarl/easykubenix">easykubenix</a></h3>
+<p>Kubernetes manifest generation using the NixOS module system. Composes cleanly, scales well, and lets you override with mkForce instead of JSON patches. Renders Helm charts into the module system for compatibility. <a href="/blog/easykubenix/">[Details]</a></p>
+
+<h3>WoW Crossfaction Battlegrounds</h3>
+<p>First public implementation of crossfaction PvP queuing for World of Warcraft private servers (~2012). Balanced queue times between factions by allowing mixed-faction teams. Implemented multiple queue modes including item-level balancing. Still used by private servers today, and the concept was later adopted by Blizzard as an official feature. <a href="/blog/wow-crossfaction-bg/">[Details]</a></p>
+
+<h3>Other</h3>
+<ul>
+  <li><a href="https://github.com/Lillecarl/dinix"><strong>dinix</strong></a> - Render dinit service configurations using Nix</li>
+  <li><a href="https://github.com/Lillecarl/registry/commit/96e3e3120f200dbf0c83cad2e2a3448f1acd0d8e"><strong>registry</strong></a> - Nix derivations for all OpenTofu registry providers</li>
+  <li><strong>RC-Butiken</strong> - C# sync daemon for 20,000+ SKUs from supplier to Shopify. SQLite state tracking with daily diffing to handle API rate limits. Built inventory/price change reports for strategic ordering and crawled Traxxas.com for spare parts categorization. <a href="/blog/rc-butiken/">[Details]</a></li>
+</ul>
