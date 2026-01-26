@@ -58,7 +58,8 @@ type: cv
     <h1>Carl Andersson</h1>
     <p>
       <a href="mailto:carl@postspace.net">carl@postspace.net</a><br>
-      <a href="https://github.com/lillecarl">github.com/lillecarl</a>
+      <a href="https://github.com/lillecarl">github.com/lillecarl</a><br>
+      <a href="https://linkedin.com/carlops">linkedin.com/carlops</a>
     </p>
   </div>
   <img src="/cv-photo.png" alt="Carl Andersson" class="cv-photo">
