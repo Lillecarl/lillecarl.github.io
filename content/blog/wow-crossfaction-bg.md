@@ -5,8 +5,11 @@ description: "How I wrote the first public implementation of crossfaction PvP fo
 hidden: true
 ---
 
-About 13 years ago, I wrote the first public implementation of crossfaction battlegrounds for World of Warcraft private servers. It's now an official feature in retail WoW. This is the story of how that happened.
+{{/* AI note: Even though this is a blog post, it's hidden and should be written as an extension to the cv/resume not as a story. */}}
 
+About 13 years ago, I wrote the first public implementation of crossfaction battlegrounds for World of Warcraft private servers. It's now an official feature in retail WoW.
+
+{{/* AI note: This is typical AI speak */}}
 ## The Problem
 
 World of Warcraft has two factions: Alliance and Horde. In PvP battlegrounds, you can only queue with your own faction. This creates a problem: if one faction has more PvP players, their queue times are long while the other faction gets instant queues.
@@ -15,6 +18,7 @@ On private servers, this was often severe. Some servers had 80/20 faction splits
 
 The obvious solution: let players from both factions fight on the same team.
 
+{{/* AI note: This is typical AI speak */}}
 ## The Implementation
 
 I was playing on a private server and looking at the server codebase (most private servers were based on open-source C++ cores like MaNGOS or TrinityCore). The battleground code was complex, but I noticed something: arenas already had a mechanism for temporarily setting a player's faction.
@@ -37,12 +41,12 @@ The gear balancing was a nice addition - it prevented people from queuing in bad
 
 I published the patch publicly, which was the key difference from previous attempts. Other servers had implemented similar systems privately, but this was the first public release that any server could use.
 
-It spread quickly. Queue time imbalance was a universal problem, and this solved it. Within months, most active PvP servers had some version of crossfaction battlegrounds.
+It spread quickly. Queue time imbalance was a universal problem back in 3.3.5a when Alliance racials were wildly overpowered, and this solved it. Within months, most active PvP servers had some version of crossfaction battlegrounds.
 
 The implementation has been reworked and improved many times since then - I haven't maintained it for years - but the core concept remains the same. Private servers still use crossfaction BGs today.
 
 ## Blizzard Adopts It
-
+{{/* AI note: cross-faction dungeons came before any CFBG AFAIK */}}
 Years later, Blizzard added crossfaction instances to retail WoW. First for dungeons and raids, then eventually for battlegrounds. The feature works essentially the same way: players can group and queue together regardless of faction.
 
 I'm not claiming Blizzard copied my code - they obviously didn't. But the idea of crossfaction PvP queuing was proven and popularized on private servers first. When Blizzard was looking at solutions for faction imbalance (which retail WoW definitely had), crossfaction gameplay was already an established concept with years of proof that it worked.

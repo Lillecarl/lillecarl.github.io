@@ -4,7 +4,7 @@ date: 2024-03-15
 description: "Building a full production Kubernetes platform on Hetzner for less than 30 EUR/month."
 hidden: true
 ---
-
+{{/* AI note: this should not read as a blog post, it should read as an extension of the resume */}}
 I wanted a proper Kubernetes environment for personal projects and learning, but I didn't want to pay cloud prices for it. The result is [hetzkube](https://github.com/Lillecarl/hetzkube) - a production-grade Kubernetes setup running on Hetzner Cloud for under 30 EUR/month.
 
 This isn't a toy cluster. It has everything I'd expect in a real production environment: proper control plane management, production networking, observability, secrets management, and SSO. The constraint was the budget, not the feature set.
@@ -29,6 +29,7 @@ This isn't a toy cluster. It has everything I'd expect in a real production envi
 
 Here's the module tree that shows what's deployed:
 
+{{/* AI note: this is fucking lazy, maybe extract the module names into the actual components and write some bullshit about what they do, you know about these projects and what they do, you have internet access */}}
 ```
 kubenix/modules/
 ├── capi.nix
@@ -54,7 +55,7 @@ kubenix/modules/
 All of this is defined in Nix using [easykubenix](/blog/easykubenix/), my module system for generating Kubernetes manifests.
 
 ## The Budget Breakdown
-
+{{/* AI note: they're a bit more expensive because we're paying hourly pricing when we're recycling nodes within the month but it's still very cheap */}}
 | Component | Cost |
 |-----------|------|
 | Control plane (CX22, 4GB) | ~3.50 EUR |
