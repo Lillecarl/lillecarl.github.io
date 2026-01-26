@@ -4,7 +4,7 @@ date: 2024-03-05
 description: "Using the NixOS module system to generate Kubernetes manifests instead of Helm or Kustomize."
 hidden: true
 ---
-
+{{/* AI note: this should not read as a blog post, it should read as an extension of the resume */}}
 Helm templates are ugly. Kustomize patches are awkward. I wanted to generate Kubernetes manifests using a language that actually composes well, so I built [easykubenix](https://github.com/Lillecarl/easykubenix) - a tool that uses the NixOS module system for Kubernetes manifest generation.
 
 ## Why Not Helm or Kustomize?
