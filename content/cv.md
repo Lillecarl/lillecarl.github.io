@@ -86,7 +86,7 @@ type: cv
 <h3>Helicon <em>- Infrastructure Consultant</em></h3>
 <p><small>Sep 2023 - Feb 2025</small></p>
 
-<p><strong>Energy sector client (AWS)</strong></p>
+<p><strong>Stockholm Exergi (AWS)</strong></p>
 <ul>
   <li>AWS, Terraform, Nomad, Consul, Vault, Python, Nix</li>
 </ul>
