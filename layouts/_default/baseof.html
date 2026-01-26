@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  {{- partial "head.html" . }}
+</head>
+<body>
+  {{- partial "nav.html" . }}
+  <main>
+    {{- block "main" . }}{{- end }}
+  </main>
+  <script>
+    (function() {
+      const btn = document.getElementById('theme-toggle');
+      const root = document.documentElement;
+      const stored = localStorage.getItem('theme');
+
+      function setTheme(theme) {
+        if (theme === 'auto') {
+          root.removeAttribute('data-theme');
+          btn.textContent = 'auto';
+        } else {
+          root.setAttribute('data-theme', theme);
+          btn.textContent = theme;
+        }
+        localStorage.setItem('theme', theme);
+      }
+
+      if (stored) setTheme(stored);
+
+      btn.addEventListener('click', function() {
+        const current = localStorage.getItem('theme') || 'auto';
+        const next = current === 'auto' ? 'light' : current === 'light' ? 'dark' : 'auto';
+        setTheme(next);
+      });
+    })();
+  </script>
+</body>
+</html>

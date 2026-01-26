@@ -1,0 +1,6 @@
+<nav>
+  {{- range .Site.Menus.main }}
+  <a href="{{ .URL }}"{{ if eq $.RelPermalink .URL }} class="active"{{ end }}>{{ .Name }}</a>{{ if not (eq .Name "about") }} | {{ end }}
+  {{- end }}
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">auto</button>
+</nav>

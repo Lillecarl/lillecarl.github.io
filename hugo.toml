@@ -1,0 +1,34 @@
+baseURL = 'https://lillecarl.com/'
+languageCode = 'en-us'
+title = 'lillecarl'
+
+[params]
+  author = "Carl Andersson"
+  description = "DevOps/SRE Portfolio"
+
+[menu]
+  [[menu.main]]
+    name = "front"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "blog"
+    url = "/blog/"
+    weight = 2
+  [[menu.main]]
+    name = "cv"
+    url = "/cv/"
+    weight = 3
+  [[menu.main]]
+    name = "contact"
+    url = "/contact/"
+    weight = 4
+  [[menu.main]]
+    name = "about"
+    url = "/about/"
+    weight = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
