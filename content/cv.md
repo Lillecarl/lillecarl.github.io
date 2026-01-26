@@ -27,6 +27,29 @@ type: cv
   border-radius: 4px;
 }
 
+/* Inline tag list */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.5rem;
+  padding: 0;
+  margin: 0.5rem 0;
+  list-style: none;
+}
+
+.tags li {
+  margin: 0;
+}
+
+.tags li:not(:last-child)::after {
+  content: " •";
+  color: var(--muted, #666);
+}
+
+.tags li strong {
+  font-weight: bold;
+}
+
 /* Add your own styles below */
 </style>
 
@@ -46,40 +69,43 @@ type: cv
 <p>DevOps/SRE engineer with 10+ years of experience across infrastructure, networking, and platform engineering. I prefer declarative configuration, battle-tested software, and solving problems properly rather than quickly. Strong background in network architecture, Kubernetes, and Nix-based infrastructure. I've worked across the stack from physical datacenters to cloud platforms, and I build tools when existing ones don't fit.</p>
 
 <h2>COMPETENCIES</h2>
-<p>
-  <strong>Kubernetes</strong> •
-  <strong>Nix/NixOS</strong> •
-  <strong>Terraform</strong> •
-  <strong>Linux</strong> •
-  Cilium •
-  Python •
-  BGP •
-  Prometheus •
-  GitHub Actions •
-  VXLAN/EVPN •
-  Docker •
-  PostgreSQL •
-  FRR •
-  AWS •
-  Vault •
-  GitLab •
-  Cumulus Linux •
-  MikroTik •
-  Grafana •
-  ClusterAPI •
-  PowerShell •
-  C# •
-  IPv6 •
-  VMware •
-  QEMU/libvirt
-</p>
+<ul class="tags">
+  <li><strong>Kubernetes</strong></li>
+  <li><strong>Nix/NixOS</strong></li>
+  <li><strong>Terraform</strong></li>
+  <li><strong>Linux</strong></li>
+  <li>Cilium</li>
+  <li>Python</li>
+  <li>BGP</li>
+  <li>Prometheus</li>
+  <li>GitHub Actions</li>
+  <li>VXLAN/EVPN</li>
+  <li>Docker</li>
+  <li>PostgreSQL</li>
+  <li>FRR</li>
+  <li>AWS</li>
+  <li>GitLab</li>
+  <li>Cumulus Linux</li>
+  <li>MikroTik</li>
+  <li>Grafana</li>
+  <li>ClusterAPI</li>
+  <li>PowerShell</li>
+  <li>C#</li>
+  <li>IPv6</li>
+  <li>VMware</li>
+  <li>QEMU/libvirt</li>
+</ul>
 
 <h2>EXPERIENCE</h2>
 
 <h3>Evolvit <em>- Infrastructure Consultant</em></h3>
 <p><small>Aug 2025 - Present (on hold)</small></p>
-<ul>
-  <li>ClusterAPI, Kubernetes, NixOS, Keycloak, VMware</li>
+<ul class="tags">
+  <li>ClusterAPI</li>
+  <li>Kubernetes</li>
+  <li>NixOS</li>
+  <li>Keycloak</li>
+  <li>VMware</li>
 </ul>
 <p>Building a production Kubernetes environment on VMware for Evolvit (formerly Dialect). Full platform including ClusterAPI-managed control plane, Cilium networking, and OIDC authentication. Training staff on Kubernetes, Nix, and Linux administration. Project on hold due to client capacity constraints.</p>
 
@@ -87,38 +113,78 @@ type: cv
 <p><small>Sep 2023 - Feb 2025</small></p>
 
 <p><strong>Stockholm Exergi (AWS)</strong></p>
-<ul>
-  <li>AWS, Terraform, Nomad, Consul, Vault, Python, Nix</li>
+<ul class="tags">
+  <li>AWS</li>
+  <li>Terraform</li>
+  <li>Nomad</li>
+  <li>Consul</li>
+  <li>Vault</li>
+  <li>Python</li>
+  <li>Nix</li>
 </ul>
 <p>Managed HashiCorp-based infrastructure in AWS. Led Terraform refactoring to improve state management and infrastructure reliability. Recommended Kubernetes migration path which client later adopted.</p>
 
 <p><strong>Kraftringen (Azure)</strong></p>
-<ul>
-  <li>Kubernetes, AKS, CloudNative-PG, Grafana, Prometheus, Keycloak, GitLab</li>
+<ul class="tags">
+  <li>Kubernetes</li>
+  <li>AKS</li>
+  <li>CloudNative-PG</li>
+  <li>Grafana</li>
+  <li>Prometheus</li>
+  <li>Keycloak</li>
+  <li>GitLab</li>
 </ul>
 <p>Maintained production AKS cluster with full observability stack. Built extensive CNPG monitoring for TimescaleDB workloads in Grafana. Managed Kustomize-based deployments and version upgrades.</p>
 
 <h3>Viaplay <em>- SRE</em></h3>
 <p><small>Sep 2022 - Aug 2023</small></p>
-<ul>
-  <li>OpenStack, Terraform, SaltStack, Ansible, Splunk, Python, MAAS</li>
-  <li>AS202093, MikroTik, Cumulus Linux, Palo Alto</li>
+<ul class="tags">
+  <li>OpenStack</li>
+  <li>Terraform</li>
+  <li>SaltStack</li>
+  <li>Ansible</li>
+  <li>Splunk</li>
+  <li>Python</li>
+  <li>MAAS</li>
+  <li>AS202093</li>
+  <li>MikroTik</li>
+  <li>Cumulus Linux</li>
+  <li>Palo Alto</li>
 </ul>
 <p>SRE in the Media Asset Management division managing hybrid cloud infrastructure. Responsible for 10+ PB storage infrastructure, transcoding compute clusters, and on-premise networking. Architected AWS-to-on-premise connectivity for MAM workload distribution. Part of team managing the physical infrastructure layer underlying Kubernetes clusters.</p>
 
 <h3>SDNit <em>- DevOps Consultant</em></h3>
 <p><small>Nov 2021 - Sep 2022</small></p>
-<ul>
-  <li>AWS, Terraform, Kubernetes, EKS, RKE2, Splunk, GitLab, Python</li>
-  <li>Keycloak, RDS, MongoDB Atlas</li>
+<ul class="tags">
+  <li>AWS</li>
+  <li>Terraform</li>
+  <li>Kubernetes</li>
+  <li>EKS</li>
+  <li>RKE2</li>
+  <li>Splunk</li>
+  <li>GitLab</li>
+  <li>Python</li>
+  <li>Keycloak</li>
+  <li>RDS</li>
+  <li>MongoDB Atlas</li>
 </ul>
 <p>Consulting for Viaplay. Initiated and deployed Kubernetes for Media Asset Management. Managed both on-premise RKE2 and EKS clusters with supporting services including Keycloak and observability tooling.</p>
 
 <h3>Dialect <em>- Infrastructure Engineer / SRE</em></h3>
 <p><small>Mar 2019 - Nov 2021</small></p>
-<ul>
-  <li>AS205834, Cumulus Linux, MikroTik, Cisco, FortiNet</li>
-  <li>VMware, Hyper-V, Veeam, Cohesity, PowerShell, Zabbix, PagerDuty</li>
+<ul class="tags">
+  <li>AS205834</li>
+  <li>Cumulus Linux</li>
+  <li>MikroTik</li>
+  <li>Cisco</li>
+  <li>FortiNet</li>
+  <li>VMware</li>
+  <li>Hyper-V</li>
+  <li>Veeam</li>
+  <li>Cohesity</li>
+  <li>PowerShell</li>
+  <li>Zabbix</li>
+  <li>PagerDuty</li>
 </ul>
 <p>Technical responsibility for a 6-rack datacenter, reporting directly to CTO on infrastructure decisions and purchases. Managed 300-400 VMs including MikroTik Cloud Hosted Router instances for customer network isolation.</p>
 <p><strong>Key achievements:</strong></p>
