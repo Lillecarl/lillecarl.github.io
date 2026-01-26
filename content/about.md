@@ -14,8 +14,4 @@ Most of my work involves making systems more reliable, deployments more predicta
 
 ## Outside of Work
 
-When I'm not staring at terminals, I enjoy tinkering with home automation, contributing to open source projects, and occasionally touching grass.
-
-## Public Key
-
-Find my public key at [my.pub](/my.pub) for secure communications.
+When I'm not staring at terminals, sailing, slopeskiing, drinking beer and listening to music.
