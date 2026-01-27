@@ -148,8 +148,37 @@ time {
   color: var(--muted);
 }
 
+.photo-swap {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 1rem;
+}
+
+.photo {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.photo-1 {
+  animation: crossfade 6s infinite;
+}
+
+.photo-2 {
+  animation: crossfade 6s infinite -3s;
+}
+
+@keyframes crossfade {
+  0%, 40% { opacity: 1; }
+  50%, 90% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @media print {
-  nav, .theme-toggle, .print-hide {
+  nav, .theme-toggle, .print-hide, .photo-swap {
     display: none !important;
   }
 
