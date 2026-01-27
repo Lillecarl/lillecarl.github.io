@@ -2,4 +2,4 @@
 title: "Blog"
 ---
 
-Posts about DevOps, infrastructure, and things I find interesting.
+<s><b>Shit</b></s>posting about technology, ~~fast cars~~trains and simple-minded opinions.
