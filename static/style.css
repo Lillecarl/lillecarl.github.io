@@ -149,7 +149,7 @@ time {
 }
 
 @media print {
-  nav, .theme-toggle {
+  nav, .theme-toggle, .print-hide {
     display: none !important;
   }
 
