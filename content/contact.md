@@ -8,6 +8,7 @@ Want to get in touch? Here's how to reach me.
 
 - **GitHub**: [lillecarl](https://github.com/lillecarl)
 - **Email**: lillecarl at lillecarl dot com
+- **Matrix**: [lillecarl@matrix](https://matrix.to/#/@lillecarl:matrix.org)
 
 ## Response Time
 
@@ -17,5 +18,5 @@ I try to respond to emails [soon-ish](https://wowwiki-archive.fandom.com/wiki/So
 
 - Open source collaboration
 - Technical discussions
-- Job opportunities (remote preferred)
+- Remote job opportunities
 - Interesting projects involving infrastructure, Nix/OS or Kubernetes
