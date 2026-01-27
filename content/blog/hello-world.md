@@ -1,19 +1,17 @@
 ---
-title: "Hello World"
-date: 2024-03-01
+title: "Hello world... Hello Carl!"
+date: 2026-01-26
 description: "First post. Why I made this site and what to expect."
+hidden: false
 ---
-# Placeholder AI slop
-Don't read this
 
 Finally got around to setting up a proper website. Built with Hugo, deployed via GitHub Actions, styled to be as minimal as possible.
 
 ## Why Bother?
 
-A few reasons:
-- Somewhere to dump technical notes that might help others
-- A place to point people when they ask about my background
-- An excuse to play with Hugo and static site generators
+A little portfolio bullshitty thingy can be useful when selling yourself online, and if I ever decide to write something
+that isn't code I don't want to lock it behind some evil megacorporations ad network (The hypocracy is strong with this one using
+GitHub pages but at least the content isn't in some proprietary format).
 
 ## What to Expect
 
