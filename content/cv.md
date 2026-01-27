@@ -50,7 +50,41 @@ type: cv
   font-weight: bold;
 }
 
-/* Add your own styles below */
+/* Spoiler/details styling */
+details {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: var(--code-bg);
+  border-radius: 4px;
+  border-left: 3px solid var(--link);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--link);
+}
+
+details summary:hover {
+  text-decoration: underline;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+}
+
+details ul, details ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+details p {
+  margin: 0.5rem 0;
+}
+
+details p:first-of-type {
+  margin-top: 0;
+}
 </style>
 
 <div class="cv-header">
@@ -189,33 +223,121 @@ type: cv
 <p>Technical responsibility for a 6-rack datacenter, reporting directly to CTO on infrastructure decisions and purchases. Managed 300-400 VMs including MikroTik Cloud Hosted Router instances for customer network isolation.</p>
 <p><strong>Key achievements:</strong></p>
 <ul>
+  <li><strong>VMware deployment:</strong> Deployed vSphere + vCloud + NSX-T + vSAN stack to replace unreliable Hyper-V. Customers got self-service via vCloud portal</li>
+  <li><strong>Datacenter consolidation:</strong> Migrated Dialect conglomerate hosting from InterXion to Skövde datacenter. Live-migrated VMs over stretched L2, then physically relocated and remounted servers to reuse hardware</li>
+  <li><strong>Network modernisation:</strong> Continued L2 removal for remaining edge cases, deployed EVPN on Cumulus Linux (Mellanox + Broadcom hardware) for appropriate L2 stretching, initiated IPv6 rollout</li>
+  <li><strong>Backup infrastructure:</strong> Deployed Cohesity for VMware and legacy Hyper-V workloads</li>
+</ul>
+
+<h3>IT Support & Sysadmin</h3>
+<p><small>2014 - 2019</small></p>
+<p>IT support and Windows Server administration serving 50+ SME customers (5-50 users each). Built high-quality support function from scratch together with one colleague. Specialized in MikroTik networking including site-to-datacenter tunnel infrastructure. PowerShell automation for cross-customer environment provisioning. This role established the networking foundation that led to my later datacenter and infrastructure work.</p>
+<p><strong>Key achievements:</strong></p>
+<ul>
   <li><strong>Network architecture redesign:</strong> Eliminated chronic STP looping issues by migrating customer connectivity from L2 tunneling to L3 routing, requiring subnet migrations across the customer base</li>
   <li><strong>O365 crisis response:</strong> When parent company went bankrupt, wrote PowerShell + Puppeteer automation to create admin users and accept new CSP partnerships across 1000+ Microsoft 365 tenants</li>
   <li><strong>Internal tooling:</strong> Built PBX queue monitoring with notifications, custom TeamViewer auto-registration installer (before native support existed), HTTP API for physical phone PBX group login/logout</li>
   <li>MikroTik and networking instructor for all Dialect branch offices</li>
 </ul>
 
-<h3>IT Support & Sysadmin</h3>
-<p><small>2014 - 2019</small></p>
-<p>IT support and Windows Server administration serving 50+ SME customers (5-50 users each). Built high-quality support function from scratch together with one colleague. Specialized in MikroTik networking including site-to-datacenter tunnel infrastructure. PowerShell automation for cross-customer environment provisioning. This role established the networking foundation that led to my later datacenter and infrastructure work.</p>
-
 <h2>PROJECTS</h2>
 
 <h3><a href="https://github.com/Lillecarl/hetzkube">hetzkube</a></h3>
-<p>Production-grade Kubernetes on Hetzner with a strict &lt;30 EUR/month budget. Full platform: ClusterAPI control plane, NixOS nodes, Cilium with Gateway API, custom IPAM for IPv4/IPv6 LoadBalancer address reuse, enforced dual-stack via Kyverno, kube-prometheus-stack, and OIDC authentication via Keycloak across all services. <a href="/blog/hetzkube/">[Details]</a></p>
+<p>Production-grade Kubernetes on Hetzner with a strict &lt;30 EUR/month budget. Full platform: ClusterAPI control plane, NixOS nodes, Cilium with Gateway API, custom IPAM for IPv4/IPv6 LoadBalancer address reuse, enforced dual-stack via Kyverno, kube-prometheus-stack, and OIDC authentication via Keycloak across all services.</p>
+<details>
+<summary>Technical details</summary>
+
+**Stack:**
+- **Control plane:** ClusterAPI on a single CX22 node (4GB, ~3.50 EUR/month). Tested with HA but unnecessary for personal use.
+- **Workers:** NixOS nodes rebuilt from scratch on every initialization. One CX32 (8GB, ~5.50 EUR/month) runs workloads.
+- **Networking:** Cilium for CNI, ingress, Gateway API, and network policies. Full dual-stack (IPv4+IPv6) enforced via Kyverno.
+- **Custom IPAM:** Reuses node IP addresses as LoadBalancer addresses to avoid Hetzner floating IP costs. Each node's /64 IPv6 block is carved up for services. Kyverno enforces IP sharing annotations.
+- **Storage:** hetzner-csi for persistent volumes, local-path-provisioner for ephemeral.
+- **Observability:** kube-prometheus-stack (Prometheus, Grafana, Alertmanager).
+- **Auth:** Keycloak OIDC for all services with web UIs.
+
+**Deployed components:** cert-manager, Cilium, CNPG, CoreDNS, external-dns, external-secrets, Gateway API, Headlamp, Keycloak, kube-prometheus-stack, Kyverno, metrics-server, pgAdmin, VPA.
+
+All manifests generated via easykubenix. Deployments via nix-csi.
+</details>
 
 <h3><a href="https://github.com/Lillecarl/nix-csi">nix-csi</a></h3>
-<p>Kubernetes CSI driver that mounts the Nix store into pods, enabling container image replacement with Nix packages. Uses hardlink views with shared inodes for memory-efficient page cache sharing across pods. Works on managed Kubernetes without node modifications. <a href="/blog/nix-csi/">[Details]</a></p>
+<p>Kubernetes CSI driver that mounts the Nix store into pods, enabling container image replacement with Nix packages. Uses hardlink views with shared inodes for memory-efficient page cache sharing across pods. Works on managed Kubernetes without node modifications.</p>
+<details>
+<summary>Technical details</summary>
+
+**Problem:** Container images have inefficient layer sharing, fragile build caching, and no intrinsic SBOM. Nix solves these at the package level but needed Kubernetes integration.
+
+**How it works:**
+1. DaemonSet deployment—no node modifications required. Works on managed clusters (EKS, GKE, AKS).
+2. Creates a node-local Nix store at `/var/lib/nix-csi`.
+3. For each CSI volume, creates a hardlink view of requested store paths.
+4. Mount modes: read-only (direct bind mount, shared inodes) or read-write (overlayfs layer).
+
+**Key benefit:** Hardlinked files share page cache across pods. When one pod loads a shared library, other pods get cached pages. Container layers can't do this—each container gets separate inodes even with the same base image.
+
+**Comparison:** Similar concept to nix-snapshotter, but doesn't require containerd modifications. Inspired Flox's "imageless Kubernetes" approach.
+
+Written in Python. In production use in hetzkube.
+</details>
 
 <h3><a href="https://github.com/Lillecarl/easykubenix">easykubenix</a></h3>
-<p>Kubernetes manifest generation using the NixOS module system. Composes cleanly, scales well, and lets you override with mkForce instead of JSON patches. Renders Helm charts into the module system for compatibility. <a href="/blog/easykubenix/">[Details]</a></p>
+<p>Kubernetes manifest generation using the NixOS module system. Composes cleanly, scales well, and lets you override with mkForce instead of JSON patches. Renders Helm charts into the module system for compatibility.</p>
+<details>
+<summary>Technical details</summary>
+
+**Why:** Helm templates are stringly-typed and hard to debug. Kustomize patches are limited—strategic merge works until it doesn't, JSON patches are verbose. The NixOS module system already solves configuration composition well.
+
+**Features:**
+- Deep merging from multiple sources
+- Type checking with clear errors
+- Override at any level with `mkForce`/`mkOverride`
+- Conditional configuration with dependency tracking
+
+**Helm compatibility:** Renders Helm charts and imports results into the module system. Override rendered resources like any other. Covers most use cases, though some hooks/lifecycle features don't translate.
+
+**nix-csi integration:** Reference Nix packages directly in manifests—nix-csi automatically identifies and pulls required store paths.
+
+In production use managing all hetzkube deployments: cert-manager, Cilium, kube-prometheus-stack, Keycloak, and applications.
+</details>
 
 <h3>WoW Crossfaction Battlegrounds</h3>
-<p>First public implementation of crossfaction PvP queuing for World of Warcraft private servers (~2012). Balanced queue times between factions by allowing mixed-faction teams. Implemented multiple queue modes including item-level balancing. Still used by private servers today, and the concept was later adopted by Blizzard as an official feature. <a href="/blog/wow-crossfaction-bg/">[Details]</a></p>
+<p>First public implementation of crossfaction PvP queuing for World of Warcraft private servers (~2012). Balanced queue times between factions by allowing mixed-faction teams. Implemented multiple queue modes including item-level balancing. Still used by private servers today, and the concept was later adopted by Blizzard as an official feature.</p>
+<details>
+<summary>Technical details</summary>
+
+**Problem:** WoW factions (Alliance/Horde) had imbalanced PvP populations. On private servers, 80/20 splits meant 30+ minute queues for one faction, instant for the other.
+
+**Implementation (C++):**
+- Reused arena faction field to temporarily assign players to opposite faction during battlegrounds
+- Modified scoreboard packets so client UI displayed teams correctly
+- Queue modes: simple (first-come-first-served) and item-level balanced (with gear-swap prevention)
+
+**Impact:** Published publicly—first implementation any server could use. Spread rapidly across the private server community during the 3.3.5a era when faction imbalance was severe. Still in use today.
+
+Blizzard later added crossfaction instances to retail WoW (dungeons/raids first, then battlegrounds). The concept was proven on private servers years earlier.
+
+One of my first real programming projects—modifying a large C++ codebase to solve a problem affecting thousands of players.
+</details>
 
 <h3>Other</h3>
 <ul>
   <li><a href="https://github.com/Lillecarl/dinix"><strong>dinix</strong></a> - Render dinit service configurations using Nix</li>
   <li><a href="https://github.com/Lillecarl/registry/commit/96e3e3120f200dbf0c83cad2e2a3448f1acd0d8e"><strong>registry</strong></a> - Nix derivations for all OpenTofu registry providers</li>
-  <li><strong>RC-Butiken</strong> - C# sync daemon for 20,000+ SKUs from supplier to Shopify. SQLite state tracking with daily diffing to handle API rate limits. Built inventory/price change reports for strategic ordering and crawled Traxxas.com for spare parts categorization. <a href="/blog/rc-butiken/">[Details]</a></li>
+  <li><strong>RC-Butiken</strong> - C# sync daemon for 20,000+ SKUs from supplier to Shopify. SQLite state tracking with daily diffing to handle API rate limits. Built inventory/price change reports for strategic ordering and crawled Traxxas.com for spare parts categorization.
+    <details>
+    <summary>Technical details</summary>
+
+**Problem:** Swedish RC hobby shop needed automated product catalog management. 20,000+ products, Shopify API rate limits, daily supplier updates.
+
+**Architecture:**
+- SQLite state tracking: store last-synced state, diff against daily supplier data, push only changes. Reduced daily API calls from 20,000+ to a few hundred.
+- Selective sync: inventory/prices updated daily, images/descriptions imported once then shop-maintained.
+- Daily reports: inventory changes, price changes, new products—enabled strategic ordering decisions.
+
+**Traxxas crawler:** Scraped Traxxas.com parts catalog to extract car model → category → part relationships. Generated tags/categories for Shopify products. Bootstrapped better spare parts browsing UX.
+
+Ran reliably for years with minimal maintenance.
+    </details>
+  </li>
 </ul>
