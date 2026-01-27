@@ -14,10 +14,10 @@ Want to get in touch? Here's how to reach me.
 
 ## Offline
 
-Carl Andersson
-Paradisäppelvägen 111
-101 10 Ankeborg
-Calisota
+[Carl Andersson\
+Paradisäppelvägen 111\
+101 10 Ankeborg\
+Calisota](https://en.wikipedia.org/wiki/Null_Island)
 
 ## Response Time
 
