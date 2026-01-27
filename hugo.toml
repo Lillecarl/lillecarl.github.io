@@ -27,12 +27,5 @@ name = "contact"
 url = "/contact/"
 weight = 4
 
-[[menu.main]]
-name = "about"
-url = "/about/"
-weight = 5
-
-[markup]
-[markup.goldmark]
 [markup.goldmark.renderer]
 unsafe = true
