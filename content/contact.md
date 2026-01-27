@@ -7,12 +7,21 @@ Want to get in touch? Here's how to reach me.
 ## Online
 
 - **GitHub**: [lillecarl](https://github.com/lillecarl)
-- **Email**: lillecarl at lillecarl dot com
+- **Email**: lillecarl at this domain
 - **Matrix**: [lillecarl@matrix](https://matrix.to/#/@lillecarl:matrix.org)
+- **Discord** [LilleCarl](http://discord.com/users/168005363264651264)
+- **Facebook** [Carl Andersson](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+
+## Offline
+
+Carl Andersson
+Paradisäppelvägen 111
+101 10 Ankeborg
+Calisota
 
 ## Response Time
 
-I try to respond to emails [soon-ish](https://wowwiki-archive.fandom.com/wiki/Soon). If it's urgent, GitHub is usually faster since I check notifications more frequently.
+I try to respond to emails [soon-ish](https://wowwiki-archive.fandom.com/wiki/Soon). If it's urgent, you can wait!
 
 ## What I'm Open To
 
