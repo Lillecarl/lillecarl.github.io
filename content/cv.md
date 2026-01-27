@@ -119,12 +119,10 @@ type: cv
 
 <h2>SUMMARY</h2>
 <p>
-  DevOps/SRE engineer with 10+ years of experience across infrastructure,
-  networking, and platform engineering. I prefer declarative configuration,
-  battle-tested software, and solving problems properly rather than quickly.
-  Strong background in network architecture, Kubernetes, and Nix-based
-  infrastructure. I've worked across the stack from physical datacenters to cloud
-  platforms, and I build tools when existing ones don't fit.
+  DevOps/SRE engineer with 10+ years of experience across infrastructure, networking, and platform engineering. I prefer
+  declarative configuration, battle-tested software, and solving problems properly rather than quickly. Strong
+  background in network architecture, Kubernetes, and Nix-based infrastructure. I've worked across the stack from
+  physical datacenters to cloud platforms, and I build tools when existing ones don't fit.
 </p>
 
 <h2>COMPETENCIES</h2>
@@ -184,10 +182,10 @@ type: cv
   <ul class="tags">
     <li>AWS</li>
     <li><strong>Terraform</strong></li>
-    <li>AWS</li>
     <li><s>Nomad</s></li>
     <li><s>Consul</s></li>
     <li><s>Vault</s></li>
+    <li><strong>Linux</strong></li>
     <li>Python</li>
     <li>Nix</li>
   </ul>
@@ -219,11 +217,11 @@ type: cv
   <h3 class="no-margin-bottom">Viaplay - Site Reliability Engineer</h3>
   <p class="no-margin-top"><small>Sep 2022 - Aug 2023</small></p>
   <ul class="tags">
-    <li>OpenStack</li>
+    <li><s>OpenStack</s></li>
     <li>AWS</li>
     <li><strong>Terraform</strong></li>
-    <li>SaltStack</li>
-    <li>Ansible</li>
+    <li><s>SaltStack</s></li>
+    <li><s>Ansible</s></li>
     <li><s>Splunk</s></li>
     <li>Python</li>
     <li><s>MAAS</s></li>
