@@ -119,10 +119,10 @@ type: cv
 
 <h2>SUMMARY</h2>
 <p>
-  DevOps/SRE engineer with 10+ years of experience across infrastructure, networking, and platform engineering. I prefer
-  declarative configuration, battle-tested software, and solving problems properly rather than quickly. Strong
-  background in network architecture, Kubernetes, and Nix-based infrastructure. I've worked across the stack from
-  physical datacenters to cloud platforms, and I build tools when existing ones don't fit.
+  DevOps/Site Reliability engineer with 10+ years of experience across infrastructure, networking, and platform
+  engineering. I prefer declarative configuration, battle-tested software, and solving problems properly rather than
+  quickly. Strong background in network architecture, Kubernetes, and Nix-based infrastructure. I've worked across the
+  stack from physical datacenters to cloud platforms, and I build tools when existing ones don't fit.
 </p>
 
 <h2>COMPETENCIES</h2>
