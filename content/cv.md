@@ -127,19 +127,19 @@ type: cv
 
 <h2>COMPETENCIES</h2>
 <ul class="tags">
-  <li><strong>Kubernetes</strong> & friends</li>
-  <li><strong>Nix/NixOS</strong></li>
-  <li><strong>Terraform</strong></li>
-  <li><strong>Linux</strong></li>
   <li>Cilium</li>
+  <li><strong>Kubernetes</strong> & friends</li>
   <li>Python</li>
   <li>BGP</li>
+  <li><strong>Nix/NixOS</strong></li>
   <li>Prometheus</li>
   <li>GitHub Actions</li>
   <li>VXLAN/EVPN</li>
+  <li><strong>Terraform</strong></li>
   <li>Docker</li>
   <li>PostgreSQL</li>
   <li>FRR</li>
+  <li><strong>Linux</strong></li>
   <li>AWS</li>
   <li>GitLab</li>
   <li>Cumulus Linux (3.x)</li>
@@ -152,7 +152,6 @@ type: cv
   <li>VMware</li>
   <li>QEMU/libvirt</li>
 </ul>
-
 <h2>EXPERIENCE</h2>
 
 <div class="nobreak-page">
@@ -166,11 +165,9 @@ type: cv
     <li>VMware</li>
   </ul>
   <p>
-    Building a production Kubernetes environment on VMware for Evolvit (formerly
-    Dialect). Full platform including ClusterAPI-managed control plane, Cilium
-    networking, OIDC authentication and all bells & whistles. Training staff
-    on Kubernetes, Nix, and Linux administration. Project on hold due to client
-    capacity constraints.
+    Building a production Kubernetes environment on VMware for Evolvit. Full platform including ClusterAPI-managed
+    control plane, Cilium networking, OIDC authentication and all bells & whistles. Training staff on Kubernetes, Nix,
+    and Linux administration. Project on hold due to client capacity constraints.
   </p>
 </div>
 
@@ -224,6 +221,7 @@ type: cv
     <li><s>Ansible</s></li>
     <li><s>Splunk</s></li>
     <li>Python</li>
+    <li><strong>Linux</strong></li>
     <li><s>MAAS</s></li>
     <li>AS202093</li>
     <li>MikroTik</li>
@@ -243,14 +241,15 @@ type: cv
   <h3 class="no-margin-bottom">SDNit - Infrastructure Consultant</h3>
   <p class="no-margin-top"><small>Nov 2021 - Sep 2022</small></p>
   <ul class="tags">
-    <li><strong>Terraform</strong></li>
     <li><strong>Kubernetes</strong></li>
     <li>AWS</li>
     <li>EKS</li>
+    <li><strong>Terraform</strong></li>
     <li><s>RKE2</s></li>
     <li><s>Splunk</s></li>
     <li>GitLab</li>
     <li>Python</li>
+    <li><strong>Linux</strong></li>
     <li>Keycloak</li>
     <li>AWS RDS</li>
     <li><s>MongoDB Atlas</s></li>
@@ -282,13 +281,13 @@ type: cv
   <ul class="tags">
     <li>AS205834</li>
     <li><strong>Cumulus Linux</strong></li>
-    <li><strong>MikroTik</strong></li>
     <li>Cisco</li>
     <li>FortiNet</li>
     <li><strong>VMware</strong></li>
     <li>Hyper-V</li>
     <li>Veeam</li>
     <li>Cohesity</li>
+    <li><strong>MikroTik</strong></li>
     <li>PowerShell</li>
     <li>Zabbix</li>
     <li>PagerDuty</li>
