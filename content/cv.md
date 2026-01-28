@@ -127,7 +127,6 @@ type: cv
 
 <h2>COMPETENCIES</h2>
 <ul class="tags">
-  <li>Cilium</li>
   <li><strong>Kubernetes</strong> & friends</li>
   <li>Python</li>
   <li>BGP</li>
@@ -137,6 +136,7 @@ type: cv
   <li>VXLAN/EVPN</li>
   <li><strong>Terraform</strong></li>
   <li>Docker</li>
+  <li>Cilium</li>
   <li>PostgreSQL</li>
   <li>FRR</li>
   <li><strong>Linux</strong></li>
