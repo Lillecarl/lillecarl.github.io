@@ -351,7 +351,7 @@ type: cv
 <h2>PROJECTS</h2>
 
 <div class="nobreak-page">
-  <h3><a href="https://github.com/Lillecarl/nix-csi">nix-csi</a></h3>
+  <h3><a href="https://github.com/lillecarl/nix-csi">nix-csi</a></h3>
   <div class="print-hide">
     <p>
       Kubernetes CSI driver that mounts the Nix store into pods, enabling container image replacement with Nix packages.
@@ -382,7 +382,7 @@ type: cv
 </div>
 
 <div class="nobreak-page">
-  <h3><a href="https://github.com/Lillecarl/easykubenix">easykubenix</a></h3>
+  <h3><a href="https://github.com/lillecarl/easykubenix">easykubenix</a></h3>
   <div class="print-hide">
     <p>
       Kubernetes manifest generation using the NixOS module system. Composes
@@ -413,7 +413,7 @@ type: cv
 </div>
 
 <div class="nobreak-page">
-  <h3><a href="https://github.com/Lillecarl/hetzkube">hetzkube</a></h3>
+  <h3><a href="https://github.com/lillecarl/hetzkube">hetzkube</a></h3>
   <div class="print-hide">
     <p>
       LARPing production-grade Kubernetes on Hetzner on a strict budget. Full platform: ClusterAPI
@@ -498,10 +498,10 @@ type: cv
 <div class="nobreak-page print-hide">
   <h3>Other</h3>
   <ul>
-    <li><a href="https://github.com/Lillecarl/dinix"><strong>dinix</strong></a> - Render dinit service configurations
+    <li><a href="https://github.com/lillecarl/dinix"><strong>dinix</strong></a> - Render dinit service configurations
       using Nix</li>
     <li><a
-        href="https://github.com/Lillecarl/registry/commit/96e3e3120f200dbf0c83cad2e2a3448f1acd0d8e"><strong>registry</strong></a>
+        href="https://github.com/lillecarl/registry/commit/96e3e3120f200dbf0c83cad2e2a3448f1acd0d8e"><strong>registry</strong></a>
       - Nix derivations for all OpenTofu registry providers</li>
     <li><strong>RC-Butiken</strong> - C# sync daemon for 20,000+ SKUs from supplier to Shopify. SQLite state tracking
       with

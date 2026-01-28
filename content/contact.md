@@ -9,7 +9,7 @@ Want to get in touch? Here's how to reach me.
 - **GitHub**: [lillecarl](https://github.com/lillecarl)
 - **Email**: lillecarl at this domain
 - **Matrix**: [lillecarl@matrix](https://matrix.to/#/@lillecarl:matrix.org)
-- **Discord** [LilleCarl](http://discord.com/users/168005363264651264)
+- **Discord** [lillecarl](http://discord.com/users/168005363264651264)
 - **Facebook** [Carl Andersson](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ## Offline
