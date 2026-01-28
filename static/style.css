@@ -13,7 +13,7 @@
   --muted: #666;
 }
 
-@media (prefers-color-scheme: dark) {
+@media screen and (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #1a1a1a;
     --fg: #e0e0e0;
@@ -24,13 +24,15 @@
   }
 }
 
-:root[data-theme="dark"] {
-  --bg: #1a1a1a;
-  --fg: #e0e0e0;
-  --link: #6cf;
-  --link-visited: #c9f;
-  --code-bg: #2a2a2a;
-  --muted: #999;
+@media screen {
+  :root[data-theme="dark"] {
+    --bg: #1a1a1a;
+    --fg: #e0e0e0;
+    --link: #6cf;
+    --link-visited: #c9f;
+    --code-bg: #2a2a2a;
+    --muted: #999;
+  }
 }
 
 :root[data-theme="light"] {
