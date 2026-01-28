@@ -201,6 +201,7 @@ time {
   }
 
   body {
+    font-size: 11pt;
     max-width: none;
     margin: 0;
     padding: 0;
